@@ -5,12 +5,18 @@ export default class Settings extends React.Component {
   
   constructor(props) {
     super(props);
+    this.onPressHome = this.onPressHome.bind(this);
+  }
+
+  onPressHome() { 
+    this.props.navigation.navigate("Home")
   }
 
   render() {
     return (
       <View style={ styles.container }>
         <Text>Settings</Text>
+        <Button title="Home" onPress={this.onPressHome} />;
       </View>
     );
   }

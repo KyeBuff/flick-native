@@ -1,11 +1,22 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default class Genres extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.onPressHome = this.onPressHome.bind(this);
+  }
+
+  onPressHome() { 
+    this.props.navigation.navigate("Home")
+  }
+
   render() {
     return (
       <View style={ styles.container }>
         <Text>Genres</Text>
+        <Button title="Home" onPress={this.onPressHome} />;
       </View>
     );
   }
