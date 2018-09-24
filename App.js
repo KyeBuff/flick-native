@@ -5,8 +5,12 @@ import Home from './screens/Home';
 import Genres from './screens/Genres';
 import Settings from './screens/Settings';
 
+import {fillDatabase} from './utilities/utilities';
+
 export default class App extends React.Component {
   render() {
+    // fillDatabase();
+    
     return (
       <RootNavigator/>
     );
