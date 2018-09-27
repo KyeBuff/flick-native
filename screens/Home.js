@@ -1,6 +1,9 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { TouchableHighlight, StyleSheet, Text, View, Button, StatusBar } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+
+let _this = null;
 
 export default class Home extends React.Component {
   
@@ -8,6 +11,19 @@ export default class Home extends React.Component {
     super(props);
     this.onPressGenres = this.onPressGenres.bind(this);
     this.onPressSettings = this.onPressSettings.bind(this);
+  }
+
+  static navigationOptions = {
+    headerRight: (
+      <TouchableHighlight
+        onPress={() => _this.onPressSettings()}>
+      <Ionicons name="md-settings" size={32} color="green" />
+      </TouchableHighlight>
+    ),
+  };
+
+  componentDidMount() {
+    _this = this;
   }
 
   onPressGenres() { 

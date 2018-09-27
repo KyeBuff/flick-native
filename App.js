@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import Home from './containers/home';
@@ -15,8 +15,7 @@ export default class App extends React.Component {
     return (
       <Provider store={ store }>
         <RootNavigator/>
-      </Provider>,
-
+      </Provider>
     );
   }
 }
@@ -28,12 +27,10 @@ const RootNavigator = createStackNavigator({
 }, {
   navigationOptions: {
     headerStyle: {
-      backgroundColor: "#fff"
+      backgroundColor: "#000"
     },
-    headerTitleStyle: {
-      color: "#fff",
-    },
-    headerTintColor: "#fff"
+    headerTintColor: "#000"
   }
+
 })
     
