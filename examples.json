@@ -1,12 +1,77 @@
 [
     {
-        "id": 1,
-        "title": "The Green Mile",
-        "img_url": "https://via.placeholder.com/600x600"
+        "id": 128,
+        "title": "Call Me Claus",
+        "img_url": "https://image.tmdb.org/t/p/original/2c2UnA89VL2Je1tUTKSngamnpT8.jpg"
+    },
+    {
+        "id": 34,
+        "title": "Musical Masquerade",
+        "img_url": null
+    },
+    {
+        "id": 144,
+        "title": "Jeepers Creepers 2",
+        "img_url": "https://image.tmdb.org/t/p/original/kYeoI6pFmt4mH6yndFgg0lyQZvL.jpg"
+    },
+    {
+        "id": 87,
+        "title": "Muck",
+        "img_url": "https://image.tmdb.org/t/p/original/7FCu6d96SKyGSomKbAWWkkL0oRd.jpg"
+    },
+    {
+        "id": 119,
+        "title": "The Rare Breed",
+        "img_url": "https://image.tmdb.org/t/p/original/xbmiydzCXb04sbY2hsDnVtuGb5j.jpg"
+    },
+    {
+        "id": 135,
+        "title": "Jules Verne's Rocket to the Moon",
+        "img_url": "https://image.tmdb.org/t/p/original/nltlbiv2SI6tpEFBf2sQZRTJ2NY.jpg"
+    },
+    {
+        "id": 39,
+        "title": "Mother Lode",
+        "img_url": "https://image.tmdb.org/t/p/original/hsJcrEvHnhLzCC9vBRfa3X110dW.jpg"
     },
     {
         "id": 2,
-        "title": "Shaun of the Dead",
-        "img_url": "https://via.placeholder.com/350x350"
+        "title": "Xmoor",
+        "img_url": "https://image.tmdb.org/t/p/original/bY8dAVhn530m6dhxyGS593WKYWD.jpg"
+    },
+    {
+        "id": 37,
+        "title": "Scarlet Web",
+        "img_url": null
+    },
+    {
+        "id": 79,
+        "title": "Live and Let Die",
+        "img_url": "https://image.tmdb.org/t/p/original/p34OScaro2KdISrT4EMfeh1aS0E.jpg"
+    },
+    {
+        "id": 108,
+        "title": "Profile",
+        "img_url": null
+    },
+    {
+        "id": 24,
+        "title": "Merry In-Laws",
+        "img_url": "https://image.tmdb.org/t/p/original/dM4z2N4vrchRgBxWgbciwj43htU.jpg"
+    },
+    {
+        "id": 48,
+        "title": "Framed For Murder",
+        "img_url": "https://image.tmdb.org/t/p/original/zpAFKPyMKYzx2YYzc25QkXP0Etz.jpg"
+    },
+    {
+        "id": 60,
+        "title": "Last Of The Badmen",
+        "img_url": "https://image.tmdb.org/t/p/original/lmP3UTDCu9y3HRWT5xtLeUYvTSC.jpg"
+    },
+    {
+        "id": 33,
+        "title": "The Christmas Clause",
+        "img_url": "https://image.tmdb.org/t/p/original/oDlGr2hLS8gfHrEeKBbxZzfeyUV.jpg"
     }
 ]

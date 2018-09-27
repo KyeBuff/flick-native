@@ -21,10 +21,19 @@ export default class MyCarousel extends React.Component {
       return (
           <View style={styles.slide}>
               <Text style={styles.title}>{item.title}</Text>
-              <Image style={styles.image} source={{uri: item.img_url}}/>
+              {item.img_url ? 
+                <View style={styles.imageContainer}>
+                  <Image style={styles.image} source={{uri: item.img_url}}/>
+                </View>
+                :
+                <View style={styles.imageContainer}>
+                  <Image style={styles.image} source={{uri: 'https://placehold.it/600x600'}}/>
+                </View>
+              }
           </View>
       );
   }
+
 
   render () {
       return (
@@ -56,10 +65,9 @@ const styles = StyleSheet.create({
   },
   image: {
     height: '100%',
-    width: '100%'
+    width: '100%',
   },
   view: {
     height: '50%',
-  }
-
+  },
 });
