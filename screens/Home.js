@@ -11,6 +11,7 @@ export default class Home extends React.Component {
     super(props);
     this.onPressGenres = this.onPressGenres.bind(this);
     this.onPressSettings = this.onPressSettings.bind(this);
+    this.onPressFlick = this.onPressFlick.bind(this);
   }
 
   static navigationOptions = {
@@ -34,12 +35,17 @@ export default class Home extends React.Component {
     this.props.navigation.navigate("Settings")
   }
 
+  onPressFlick() { 
+    this.props.getMedia()
+  }
+
   render() {
     return (
       <View style={ styles.container }>
-        <Text>Home</Text>
-        <Button title="Settings" onPress={this.onPressSettings} />
-        <Button title="Genres" onPress={this.onPressGenres} />
+        <Text>Home</Text>;
+        <Button title="Settings" onPress={this.onPressSettings} />;
+        <Button title="Genres" onPress={this.onPressGenres} />;
+        <Button title="Flick" onPress={this.onPressFlick} />;
         <Carousel data={this.props.media} />
       </View>
     );
