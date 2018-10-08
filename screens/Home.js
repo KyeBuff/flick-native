@@ -17,8 +17,14 @@ export default class Home extends React.Component {
   static navigationOptions = {
     headerRight: (
       <TouchableHighlight
-        onPress={() => _this.onPressSettings()}>
-      <Ionicons name="md-settings" size={32} color="green" />
+        onPress={() => _this.onPressSettings()}
+      >
+        <Ionicons 
+          name="md-settings" 
+          size={32} 
+          color="lightgrey"
+          style={{marginRight: 20}}
+        />
       </TouchableHighlight>
     ),
   };

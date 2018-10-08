@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import Home from './containers/home';
 import Genres from './screens/Genres';
@@ -20,6 +20,8 @@ export default class App extends React.Component {
   }
 }
 
+StatusBar.setBarStyle('light-content');
+
 const RootNavigator = createStackNavigator({ 
   Home: Home,
   Genres: Genres,
@@ -27,9 +29,10 @@ const RootNavigator = createStackNavigator({
 }, {
   navigationOptions: {
     headerStyle: {
-      backgroundColor: "#000"
+      backgroundColor: "#000",
+      borderBottomWidth: 0
     },
-    headerTintColor: "#000"
+    headerTintColor: "#ad"
   }
 
 })
