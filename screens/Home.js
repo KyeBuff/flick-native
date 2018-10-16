@@ -40,6 +40,7 @@ export default class Home extends React.Component {
     await Font.loadAsync({
        'bangers': require('../assets/fonts/bangers.ttf'),
      });
+    this.props.getMedia();
     this.setState({fontLoaded: true});
    }
 
