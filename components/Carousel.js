@@ -1,6 +1,6 @@
 import Carousel from 'react-native-snap-carousel';
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, ImageBackground } from 'react-native';
 
 const horizontalMargin = 20;
 const slideWidth = 280;
@@ -23,11 +23,11 @@ export default class MyCarousel extends React.Component {
               <Text style={styles.title}>{item.title}</Text>
               {item.img_url ? 
                 <View style={styles.imageContainer}>
-                  <Image style={styles.image} source={{uri: item.img_url}}/>
+                  <ImageBackground imageStyle={styles.image} style={styles.image} source={{uri: item.img_url}}/>
                 </View>
                 :
                 <View style={styles.imageContainer}>
-                  <Image style={styles.image} source={{uri: 'https://placehold.it/600x600'}}/>
+                  <ImageBackground imageStyle={styles.image} style={styles.image} source={{uri: 'https://placehold.it/600x600'}}/>
                 </View>
               }
           </View>
@@ -64,10 +64,14 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   image: {
-    height: '100%',
-    width: '100%',
+    borderRadius: 5,
+    height: 300,
+    width: 300,
   },
   view: {
     height: '50%',
   },
+  imageContainer: {
+    borderRadius: 25,
+  }
 });

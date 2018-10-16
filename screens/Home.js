@@ -1,7 +1,8 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
-import { TouchableHighlight, StyleSheet, Text, View, Button, StatusBar } from 'react-native';
+import { TouchableHighlight, TouchableOpacity, StyleSheet, Text, View, Button, StatusBar } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { Font } from 'expo';
 
 let _this = null;
 
@@ -9,6 +10,10 @@ export default class Home extends React.Component {
   
   constructor(props) {
     super(props);
+
+    this.state = {
+      fontLoaded: false,
+    }
     this.onPressGenres = this.onPressGenres.bind(this);
     this.onPressSettings = this.onPressSettings.bind(this);
     this.onPressFlick = this.onPressFlick.bind(this);
@@ -29,9 +34,13 @@ export default class Home extends React.Component {
     ),
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     _this = this;
-  }
+    await Font.loadAsync({
+       'bangers': require('../assets/fonts/bangers.ttf'),
+     });
+    this.setState({fontLoaded: true});
+   }
 
   onPressGenres() { 
     this.props.navigation.navigate("Genres")
@@ -48,11 +57,15 @@ export default class Home extends React.Component {
   render() {
     return (
       <View style={ styles.container }>
-        <Text>Home</Text>;
-        <Button title="Settings" onPress={this.onPressSettings} />;
-        <Button title="Genres" onPress={this.onPressGenres} />;
-        <Button title="Flick" onPress={this.onPressFlick} />;
         <Carousel data={this.props.media} />
+          {this.state.fontLoaded ?
+          <TouchableOpacity 
+            style={styles.flickBtn}
+            onPress={this.onPressFlick}
+          >
+            <Text style={ styles.flickBtn }>Flick</Text>
+          </TouchableOpacity>
+          : null}
       </View>
     );
   }
@@ -65,5 +78,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  flickBtn: {
+    borderRadius: 3,
+    marginRight: '15%',
+    marginLeft: '15%',
+    fontFamily: 'bangers', 
+    fontSize: 56,
+    color: '#FFF',
+    backgroundColor: '#34495E',
+    width: '70%',
+    textAlign: 'center',
   },
 });

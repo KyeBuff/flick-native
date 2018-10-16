@@ -6,10 +6,15 @@ import Genres from './screens/Genres';
 import Settings from './screens/Settings';
 import { Provider } from "react-redux";
 import { store } from "./data/initial";
-
+import { Font } from 'expo';
 import {fillDatabase} from './utilities/utilities';
 
 export default class App extends React.Component {
+  componentDidMount() {
+    Font.loadAsync({
+       'bangers': require('./assets/fonts/bangers.ttf'),
+     });
+   }
   render() {
     // fillDatabase();
     return (
@@ -32,8 +37,7 @@ const RootNavigator = createStackNavigator({
       backgroundColor: "#000",
       borderBottomWidth: 0
     },
-    headerTintColor: "#ad"
+    headerTintColor: "lightgrey"
   }
 
 })
-    
