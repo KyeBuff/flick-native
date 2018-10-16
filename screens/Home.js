@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Carousel from '../components/Carousel';
+import Filters from '../components/Filters';
 import { TouchableHighlight, TouchableOpacity, StyleSheet, Text, View, Button, StatusBar } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Font } from 'expo';
@@ -58,14 +59,15 @@ export default class Home extends React.Component {
     return (
       <View style={ styles.container }>
         <Carousel data={this.props.media} />
-          {this.state.fontLoaded ?
+        {this.state.fontLoaded ?
           <TouchableOpacity 
-            style={styles.flickBtn}
+            style={styles.flickBtnContainer}
             onPress={this.onPressFlick}
           >
             <Text style={ styles.flickBtn }>Flick</Text>
           </TouchableOpacity>
-          : null}
+        : null}
+        <Filters />
       </View>
     );
   }
@@ -76,18 +78,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#000',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    justifyContent: 'center',
+  },
+  flickBtnContainer: {
+    marginRight: '15%',
+    marginLeft: '15%',
+    width: '70%',
+    backgroundColor: '#34495E',
   },
   flickBtn: {
     borderRadius: 3,
-    marginRight: '15%',
-    marginLeft: '15%',
     fontFamily: 'bangers', 
     fontSize: 56,
     color: '#FFF',
-    backgroundColor: '#34495E',
-    width: '70%',
     textAlign: 'center',
   },
 });

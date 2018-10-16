@@ -1,0 +1,14 @@
+[
+	{
+		"label": "All",
+		"endpoint": ""
+	},
+	{
+		"label": "Films",
+		"endpoint": "films"
+	},
+	{
+		"label": "TV Series",
+		"endpoint": "series"
+	}
+]
