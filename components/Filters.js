@@ -33,8 +33,6 @@ export default class extends Component {
 	}
 }
 	
-);
-
 const styles = StyleSheet.create({
   filters: {
     flex: 1,
