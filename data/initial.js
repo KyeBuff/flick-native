@@ -5,7 +5,7 @@ import reducer from './reducer';
 
 
 const initial = {
-    media: examples,
+    media: []
 };
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

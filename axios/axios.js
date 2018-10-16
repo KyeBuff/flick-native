@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = 'http://flick.test/api';
+const baseURL = 'http://flickapi2-env.sdqwkshunp.us-east-2.elasticbeanstalk.com/api/';
 
 export default axios.create({
     baseURL: baseURL,

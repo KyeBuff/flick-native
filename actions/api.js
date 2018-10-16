@@ -1,8 +1,9 @@
 import axios from '../axios/axios';
+import { setMedia } from './state';
 
 export const getMedia = () => dispatch => {
-	axios.get('media').then(({ title, id, img_url }) => {
-		const media = data;
+	axios.get('media').then(({ data }) => {
+		const media = data.data;
 		dispatch(setMedia(media))
 	});
 };

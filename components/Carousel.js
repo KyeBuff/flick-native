@@ -17,6 +17,12 @@ export default class MyCarousel extends React.Component {
     }
   }
 
+  componentDidUpdate() {
+    if(this.state.entries !== this.props.data) {
+      this.setState({entries: this.props.data})
+    }
+  }
+
   _renderItem ({item, index}) {
       return (
           <View style={styles.slide}>
@@ -61,7 +67,12 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   title: {
-    color: 'red',
+    color: '#fff',
+    fontFamily: 'bangers',
+    fontSize: 30,
+    textAlign: 'center',
+    marginBottom: 10,
+ 
   },
   image: {
     borderRadius: 5,
