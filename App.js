@@ -10,11 +10,7 @@ import { Font } from 'expo';
 import {fillDatabase} from './utilities/utilities';
 
 export default class App extends React.Component {
-  componentDidMount() {
-    Font.loadAsync({
-       'bangers': require('./assets/fonts/bangers.ttf'),
-     });
-   }
+
   render() {
     // fillDatabase();
     return (

@@ -4,6 +4,8 @@ import Filters from '../components/Filters';
 import { TouchableHighlight, TouchableOpacity, StyleSheet, Text, View, Button, StatusBar } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Font } from 'expo';
+import FlickButt from '../components/FlickButt';
+
 
 let _this = null;
 
@@ -38,10 +40,12 @@ export default class Home extends React.Component {
   async componentDidMount() {
     _this = this;
     await Font.loadAsync({
-       'bangers': require('../assets/fonts/bangers.ttf'),
-     });
+       'arimo': require('../assets/fonts/Arimo-Italic.ttf'),
+    })
+      .then(() => {
+        this.setState({fontLoaded: true});
+      });
     this.props.getMedia();
-    this.setState({fontLoaded: true});
    }
 
   onPressGenres() { 
@@ -61,14 +65,11 @@ export default class Home extends React.Component {
       <View style={ styles.container }>
         <Carousel data={this.props.media} />
         {this.state.fontLoaded ?
-          <TouchableOpacity 
-            style={styles.flickBtnContainer}
-            onPress={this.onPressFlick}
-          >
-            <Text style={ styles.flickBtn }>Flick</Text>
-          </TouchableOpacity>
+          <Fragment>
+            <FlickButt onPress={this.onPressFlick} />
+            <Filters />
+          </Fragment>
         : null}
-        <Filters />
       </View>
     );
   }
@@ -90,7 +91,7 @@ const styles = StyleSheet.create({
   },
   flickBtn: {
     borderRadius: 3,
-    fontFamily: 'bangers', 
+    fontFamily: 'arimo', 
     fontSize: 56,
     color: '#FFF',
     textAlign: 'center',

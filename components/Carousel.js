@@ -68,7 +68,6 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#fff',
-    fontFamily: 'bangers',
     fontSize: 30,
     textAlign: 'center',
     marginBottom: 10,
