@@ -45,6 +45,8 @@ export default class MyCarousel extends React.Component {
       return (
         <View style={styles.view}>
           <Carousel
+            layout="stack" 
+            layoutCardOffset="18"
             data={this.state.entries}
             renderItem={this._renderItem}
             windowSize={1}
